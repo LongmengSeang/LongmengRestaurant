@@ -1,0 +1,69 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    padding: 20px;
+} 
+#HamburgerMenu{position:relative;}
+#HamburgerMenu input[type="checkbox"]#chkMenu{
+    display: none;
+}
+#HamburgerMenu input[type="checkbox"]#chkMenu + label{
+  width: 40px;
+  height: 31px;
+  border: 1px dashed grey;
+  background-color:transparent;
+  display: block;
+  cursor: pointer;
+  position: relative;
+  
+}
+
+#HamburgerMenu input[type="checkbox"]#chkMenu + label div[class^="line"]{
+    left: 6px;
+    right: 6px;
+    background-color: black; height: 2px;
+    border-radius: 4px; 
+    position: absolute;
+    transition: all ease-in-out 400ms;
+    
+}
+#HamburgerMenu input[type="checkbox"]#chkMenu + label div[class^="line1"]{
+   top: 6px;
+}
+#HamburgerMenu input[type="checkbox"]#chkMenu + label div[class^="line2"]{
+    top: 14px;
+    height: 1px;
+}
+#HamburgerMenu input[type="checkbox"]#chkMenu + label div[class^="line3"]{
+    top:21px;
+}
+
+#HamburgerMenu input[type="checkbox"]#chkMenu:checked + label div[class^="line1"]{
+    top: 6px;
+    transform: rotate(135deg);
+ 
+ }
+ #HamburgerMenu input[type="checkbox"]#chkMenu:checked + label div[class^="line2"]{
+     top: 14px;
+     opacity: 0;
+    transform: rotate(135deg);
+ }
+ #HamburgerMenu input[type="checkbox"]#chkMenu:checked + label div[class^="line3"]{
+     top:21px;
+     transform: rotate(-135deg);
+     
+ }
+ 
+
+#HamburgerMenu input[type="checkbox"]#chkMenu ~ #alllinks{
+    position: absolute; 
+     left: -300px;
+    transition:all ease-in-out 500ms;
+
+}
+#HamburgerMenu  input[type="checkbox"]#chkMenu:checked ~ #alllinks{
+    left: 0;
+}
